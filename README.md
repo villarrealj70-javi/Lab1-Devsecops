@@ -1,4 +1,4 @@
-# Lab1-DevSecOps-G4
+# Lab1-DevSecOps
 
 ## Descripción
 
@@ -37,8 +37,8 @@ Antes de ejecutar la aplicación, asegúrese de tener instalado:
 * Git
 
 ### Clonar el repositorio
-`git clone https://github.com/SU-USUARIO/Lab1-Devsecops-G4.git`
-`cd Lab1-Devsecops-G4`
+`git clone https://github.com/juice-shop/juice-shop.git`
+`cd juice-shop`
 
 ### Ejecutar OWASP Juice Shop con Docker
 `docker run --rm -p 3000:3000 bkimminich/juice-shop`
@@ -49,6 +49,13 @@ Una vez iniciado el contenedor, abrir un navegador web y acceder a: http://local
 ### Verificar el funcionamiento
 Si la aplicación se ha iniciado correctamente, se mostrará la página principal de OWASP Juice Shop en el navegador.
 
+### Conectar tu repositorio local con GitHub
+`git remote remove origin`
+`git remote add origin https://github.com/SU-USUARIO/Lab1-Devsecops.git`
+
+### Subir el código
+`git branch -M main`
+`git push -u origin main`
 
 # ![Juice Shop Logo](https://raw.githubusercontent.com/juice-shop/juice-shop/master/frontend/src/assets/public/images/JuiceShop_Logo_100px.png) OWASP Juice Shop
 
