@@ -1,3 +1,55 @@
+# Lab1-DevSecOps-G4
+
+## Descripción
+
+Este repositorio contiene el desarrollo del Laboratorio 1 de DevSecOps, utilizando OWASP Juice Shop como aplicación vulnerable para la implementación de prácticas de seguridad en el ciclo de desarrollo de software.
+
+## Objetivos
+
+* Implementar análisis estático de código (SAST) mediante GitHub Actions.
+* Detectar vulnerabilidades en dependencias y componentes de software.
+* Identificar secretos expuestos dentro del código fuente.
+* Aplicar correcciones de seguridad y documentar los hallazgos encontrados.
+* Integrar controles de seguridad dentro de un flujo DevSecOps.
+
+## Herramientas Utilizadas
+
+* OWASP Juice Shop
+* GitHub
+* GitHub Actions
+* Semgrep
+* Trivy
+* GitLeaks
+* Docker
+
+## Integrantes
+
+* Bryan Gonzalez
+* Hiroshi Komatsu
+* Joel Villarreal
+
+## Cómo levantar la aplicación localmente
+
+### Prerrequisitos
+
+Antes de ejecutar la aplicación, asegúrese de tener instalado:
+* Docker Desktop
+* Git
+
+### Clonar el repositorio
+`git clone https://github.com/SU-USUARIO/Lab1-Devsecops-G4.git`
+`cd Lab1-Devsecops-G4`
+
+### Ejecutar OWASP Juice Shop con Docker
+`docker run --rm -p 3000:3000 bkimminich/juice-shop`
+
+### Acceder a la aplicación
+Una vez iniciado el contenedor, abrir un navegador web y acceder a: http://localhost:3000
+
+### Verificar el funcionamiento
+Si la aplicación se ha iniciado correctamente, se mostrará la página principal de OWASP Juice Shop en el navegador.
+
+
 # ![Juice Shop Logo](https://raw.githubusercontent.com/juice-shop/juice-shop/master/frontend/src/assets/public/images/JuiceShop_Logo_100px.png) OWASP Juice Shop
 
 [![OWASP Flagship](https://img.shields.io/badge/owasp-flagship%20project-48A646.svg)](https://owasp.org/projects/#sec-flagships)
