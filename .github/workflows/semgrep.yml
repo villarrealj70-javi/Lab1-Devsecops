@@ -7,23 +7,19 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  security-events: write   # Permiso necesario
+
 jobs:
   semgrep:
     name: Scan with Semgrep
     runs-on: ubuntu-latest
-    container:
-      image: returntocorp/semgrep
-
+    
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run Semgrep scan
-        run: semgrep scan --config p/default --config p/security-audit --sarif --output semgrep.sarif
-
-      - name: Upload SARIF results to GitHub
-        uses: github/codeql-action/upload-sarif@v3
+      - name: Scan with Semgrep
+        uses: returntocorp/semgrep-action@v1
         with:
-          sarif_file: semgrep.sarif
-
-      - name: Summary
-        run: echo "✅ Semgrep scan completed successfully"
+          config: "p/default,p/security-audit"
