@@ -16,13 +16,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run Trivy filesystem scan
+      - name: Run Trivy filesystem scan (All Severities)
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'fs'
           scan-ref: '.'
           format: 'table'
-          severity: 'HIGH,CRITICAL'
+          severity: 'LOW,MEDIUM,HIGH,CRITICAL'   # ← Todas las severidades
           exit-code: '0'
           ignore-unfixed: false
           scanners: 'vuln,secret'
