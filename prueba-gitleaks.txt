@@ -1,6 +1,12 @@
-# === PRUEBA PARA GITLEAKS ===
+# PRUEBA DEFINITIVA GITLEAKS
 
-# Este es un secreto falso para la demostración del laboratorio
-AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
-PASSWORD=MiContraseñaSuperSecreta2026!
-API_SECRET=supersecretkey1234567890
+# AWS Key
+AKIAIOSFODNN7EXAMPLE
+
+# Password
+password=ThisIsMySuperSecretPasswordForTheLab2026!!
+
+# Private Key fragment
+-----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC
+-----END PRIVATE KEY-----
