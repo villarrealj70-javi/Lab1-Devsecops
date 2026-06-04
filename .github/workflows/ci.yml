@@ -1,4 +1,9 @@
 name: "CI/CD Pipeline"
+
+# Desactivado temporalmente para el laboratorio
+on: 
+  workflow_dispatch:   # Solo se ejecuta manualmente
+
 on:
   push:
     branches-ignore:
