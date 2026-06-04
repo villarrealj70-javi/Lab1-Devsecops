@@ -16,9 +16,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install dependencies (para que Trivy vea node_modules)
-        run: npm ci --production=false
-
       - name: Run Trivy filesystem scan
         uses: aquasecurity/trivy-action@master
         with:
@@ -29,4 +26,3 @@ jobs:
           exit-code: '0'
           ignore-unfixed: false
           scanners: 'vuln,secret'
-          vuln-type: 'library'        
